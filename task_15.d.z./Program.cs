@@ -38,8 +38,3 @@ if (day <= 5) {
 } else {
         Console.WriteLine("Введите цифру от 1 до 7");
 }
-
-
-// string[] daysOfWeek = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", 
-// "Воскресенье" };
-// Console.WriteLine(daysOfWeek);
