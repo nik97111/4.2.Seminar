@@ -8,13 +8,13 @@ int numberOne = int.Parse(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int numberTwo = int.Parse(Console.ReadLine());
 
-int a = numberTwo % 2;
+int remainder = numberTwo % 2;
 //Console.WriteLine(a);
 
 if ((numberTwo % 2) == 0) {
     Console.WriteLine($"Второе число -> {numberTwo} является кратным");
 } else {
-    Console.WriteLine($"Второе число -> {numberTwo} не является кратным, остаток от деления -> {a}");
+    Console.WriteLine($"Второе число -> {numberTwo} не является кратным, остаток от деления -> {remainder}");
 }
 
 
