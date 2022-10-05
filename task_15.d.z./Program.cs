@@ -23,9 +23,8 @@
 // } else if (day == 7) {
 //     Console.WriteLine("Выходной день");
 // } else {
-//     Console.WriteLine("Введите число от 1 до 7");
+//     Console.WriteLine("Введите цифру от 1 до 7");
 // }
-
 
 // Короткая запись
 
@@ -34,13 +33,12 @@ int day = int.Parse(Console.ReadLine());
 
 if (day <= 5) {
     Console.WriteLine("Рабочий день");
-} else if (day == 6) {
-    Console.WriteLine("Выходной день");
-} else if (day == 7) {
+} else if ((day == 6) || (day == 7)) {
     Console.WriteLine("Выходной день");
 } else {
-    Console.WriteLine("Введите число от 1 до 7");
+        Console.WriteLine("Введите цифру от 1 до 7");
 }
+
 
 // string[] daysOfWeek = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", 
 // "Воскресенье" };
