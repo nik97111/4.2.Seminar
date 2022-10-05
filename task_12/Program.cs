@@ -9,14 +9,13 @@ int numberOne = int.Parse(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int numberTwo = int.Parse(Console.ReadLine());
 
-int remainder = numberTwo % numberOne;
-Console.WriteLine(remainder);
+int remainder = numberOne % numberTwo;
 
-// if ((numberOne % numberTwo) == 0) {
-//     Console.WriteLine($"Второе число -> {numberTwo} является кратным первому -> {numberOne}");
-// } else {
-//     Console.WriteLine($"Второе число -> {numberTwo} не является кратным первому, остаток от деления -> {remainder}");
-// }
+if ((numberOne % numberTwo) == 0) {
+    Console.WriteLine($"Второе число -> {numberTwo} является кратным первому -> {numberOne}");
+} else {
+    Console.WriteLine($"Второе число -> {numberTwo} не является кратным первому, остаток от деления -> {remainder}");
+}
 
 
 
