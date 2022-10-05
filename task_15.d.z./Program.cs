@@ -3,7 +3,6 @@
 // 6 -> да, 7 -> да, 1 -> нет
 
 
-// 1-й способ
 
 // Console.Write("Введите цифру от 1 до 7: ");
 // int day = int.Parse(Console.ReadLine());
@@ -26,7 +25,7 @@
 //     Console.WriteLine("Введите цифру от 1 до 7");
 // }
 
-// Короткая запись 1-го способа
+// Короткая запись
 
 Console.Write("Введите цифру от 1 до 7: ");
 int day = int.Parse(Console.ReadLine());
