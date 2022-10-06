@@ -2,16 +2,18 @@
 // что третьей цифры нет.
 // 645 -> 5, 78 -> третьей цифры нет, 32679 -> 6
 
-Console.Write("Введите число не менее двухзначного: ");
+Console.Write("Введите число не менее трехзначного: ");
 int number = int.Parse(Console.ReadLine());
 
-int digitThree = 0;
-
-if ((number >= 100) && (number < 1000)) 
+if (number < 99)
 {
-    digitThree = number % 10;
-    Console.WriteLine(digitThree);
+Console.Write("Третьей цифры нет. Введите число не менее трехзначного: ");
 } else 
 {
-    Console.WriteLine("Третьей цифры нет");
+Console.WriteLine(number>99 ? number.ToString()[2] : '-');
+Console.ReadKey(true);
 }
+
+
+
+
