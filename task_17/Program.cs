@@ -8,29 +8,28 @@ Console.WriteLine("Введите координаты точки Y: ");
 int Y = int.Parse(Console.ReadLine());
 
 
-if ((X != 0) && (Y != 0))
+
+if ((X > 0) && (Y > 0))
 {
-    if ((X > 0) && (Y > 0))
-    {
-        Console.WriteLine("Точка находится в плоскости 1");
-    }
+    Console.WriteLine("Точка находится в плоскости 1");
+}
 
-    if ((X < 0) && (Y > 0))
-    {
-        Console.WriteLine("Точка находится в плоскости 2");
-    }
+if ((X < 0) && (Y > 0))
+{
+    Console.WriteLine("Точка находится в плоскости 2");
+}
 
-    if ((X < 0) && (Y < 0))
-    {
-        Console.WriteLine("Точка находится в плоскости 3");
-    }
+if ((X < 0) && (Y < 0))
+{
+    Console.WriteLine("Точка находится в плоскости 3");
+}
 
-    if ((X > 0) && (Y < 0))
-    {
-        Console.WriteLine("Точка находится в плоскости 4");
-    }
-    else 
-    { 
-        Console.WriteLine("Введите координаты, не равные нулю");
-    }
+if ((X > 0) && (Y < 0))
+{
+    Console.WriteLine("Точка находится в плоскости 4");
+}
+    
+else if ((X == 0) && (Y == 0))
+{ 
+    Console.WriteLine("Введите координаты, не равные нулю");
 }
