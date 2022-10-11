@@ -6,7 +6,12 @@
 Console.Write("Введите число: ");
 int number = int.Parse(Console.ReadLine());
 
+if (number <= 0) {
+    Console.Write("Введите число больше 0");
+    number = int.Parse(Console.ReadLine());
+}
+
 for (int i = 1; i <= number; i++)
 {
     Console.WriteLine(i * i * i);
-}
+} 
