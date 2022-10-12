@@ -14,7 +14,7 @@
 
 
 
-Console. Write("Введите число: ");
+Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine());
 Console.WriteLine($"Сумма цифр = {GetSumNums(num)}");
 // int num1 = int.Parse(Console.ReadLine());
