@@ -64,7 +64,7 @@ int[] ArrayRandom(int[] arrayRandom)
 
          if (arrayRandom[i] > 0)
              sumPositiveNumbers += arrayRandom[i];
-           else if (arrayRandom[i] < 0)
+         else if (arrayRandom[i] < 0)
              sumNegativeNumbers += arrayRandom[i];
      }
      Console.WriteLine($"Сумма положительных чисел = {sumPositiveNumbers}, сумма отрицательных чисел = {sumNegativeNumbers}");
