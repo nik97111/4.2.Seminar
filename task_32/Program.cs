@@ -38,16 +38,3 @@ int[] Array(int[] array)
     return array;
 }
 
-
-// int[] array = new int[4];
-
-// foreach(int el in array)
-// {   
-//     array[el] = new Random().Next(-9, 9);
-
-//     if (el > 0)
-//         el =  -el;
-//     else
-//         el = el;
-// }
-// Console.WriteLine(array[el]);
