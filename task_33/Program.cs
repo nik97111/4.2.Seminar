@@ -5,32 +5,6 @@
 
 
 
-// int[] array = new int[5];
-// for (int i = 0; i < array.Length; i++)
-// {
-//     array[i] = new Random().Next(-9, 9);
-//     Console.Write($"{array[i]} ");
-// }
-//     Console.WriteLine();
-//     Console.Write("Введите число: ");
-//     int number = int.Parse(Console.ReadLine());
-    
-//     bool found = false;
-// for (int i = 0; i < array.Length; i++)
-//     {
-//         if (number == array[i]) {
-//             found = true;
-//             break;
-//         }
-//     }
-
-//     if (found) {
-//         Console.WriteLine("Есть число");
-//     } else {
-//         Console.WriteLine("Этого числа нет в массиве");
-//     }
-
-
 int[] array = new int[5];
 for (int i = 0; i < array.Length; i++)
 {
@@ -41,13 +15,17 @@ for (int i = 0; i < array.Length; i++)
     Console.Write("Введите число: ");
     int number = int.Parse(Console.ReadLine());
     
+    bool found = false;
 for (int i = 0; i < array.Length; i++)
     {
-        if (number == array[i]) 
-        {   
-            Console.WriteLine("Это число есть в массиве");
-        } else 
-        {
-            Console.WriteLine("Этого числа нет в массиве");
+        if (number == array[i]) {
+            found = true;
+            break;
         }
+    }
+
+    if (found) {
+        Console.WriteLine("Это число есть в массиве");
+    } else {
+        Console.WriteLine("Этого числа нет в массиве");
     }
