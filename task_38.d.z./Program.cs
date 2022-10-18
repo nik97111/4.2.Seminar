@@ -48,13 +48,9 @@ int[] ArrayRandom(int[] arrayRandom)
     for (int i = 1; i < arrayRandom.Length; i++)
     {
         if (arrayRandom[i] > maxEl)
-        {
             maxEl = arrayRandom[i];
-        } else if (arrayRandom[i] < minEl)
-        {
+        else if (arrayRandom[i] < minEl)
             minEl = arrayRandom[i];
-        }
-
     }
     difference = maxEl - minEl;
     Console.WriteLine();
