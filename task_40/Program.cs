@@ -25,7 +25,6 @@ int numberSecond = GetNumber();
 int numberThree = GetNumber();
 PrintRes(numberFirst, numberSecond, numberThree);
 
-
 int GetNumber()
 {
     Console.Write("Введите число: ");
@@ -36,23 +35,35 @@ int GetNumber()
 void PrintRes(int numFirst, int numSecond, int numThree)
 {
     if (numFirst > 0 && numSecond > 0 && numThree > 0)
-    {
         if ((numFirst < (numSecond + numThree)) && (numSecond < (numFirst + numThree)) 
-        && (numThree < (numFirst + numSecond)))
-        {   
+        && (numThree < (numFirst + numSecond)))  
             Console.WriteLine("Треугольник может существовать");
-        }
         else 
-        {
             Console.WriteLine("Треугольник не может существовать");
-        }
-    }
     else 
-    {
         Console.WriteLine("Введите число больше нуля");
-    }
     
 }
+// void PrintRes(int numFirst, int numSecond, int numThree)
+// {
+//     if (numFirst > 0 && numSecond > 0 && numThree > 0)
+//     {
+//         if ((numFirst < (numSecond + numThree)) && (numSecond < (numFirst + numThree)) 
+//         && (numThree < (numFirst + numSecond)))
+//         {   
+//             Console.WriteLine("Треугольник может существовать");
+//         }
+//         else 
+//         {
+//             Console.WriteLine("Треугольник не может существовать");
+//         }
+//     }
+//     else 
+//     {
+//         Console.WriteLine("Введите число больше нуля");
+//     }
+    
+// }
 
 
 
