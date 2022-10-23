@@ -35,12 +35,12 @@ int[] ArrayBinNums(int key)
     return res;
 }
 
-// void PrintArray(int[] array)
-// {
-//     for (int i = 0; i < array.Length; i++) {
-//         Console.Write(array[i] + "");
-//     }
-// }
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++) {
+        Console.Write(array[i] + "");
+    }
+}
 
 
 
