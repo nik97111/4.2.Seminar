@@ -44,6 +44,10 @@ void PrintRes(int numFirst, int numSecond, int numThree)
         Console.WriteLine("Введите число больше нуля");
     
 }
+
+
+
+
 // void PrintRes(int numFirst, int numSecond, int numThree)
 // {
 //     if (numFirst > 0 && numSecond > 0 && numThree > 0)
