@@ -21,8 +21,7 @@ double[,] GetArray(int m, int n, int minValue, int maxValue)
     {
         for (int j = 0; j < n; j++)
         {
-            //result[i, j] = new Random().NextDouble() * 10;
-            result[i, j] = new Random().Next(minValue, maxValue);
+            result[i, j] = new Random().NextDouble() * 10;
         }
     }
     return result;
