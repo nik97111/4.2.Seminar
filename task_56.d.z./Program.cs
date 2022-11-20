@@ -17,9 +17,7 @@ int columns = int.Parse(Console.ReadLine());
 
 int[,] array = GetArray(rows, columns, 0, 10);
 PrintArray(array);
-// PrintArrayEl(array);
-// Console.WriteLine();
-// PrintArray(array);
+Console.WriteLine($"{PrintArrayEL(array) + 1}-я строка");
 
 int[,] GetArray(int m, int n, int minValue, int maxValue) 
 {
@@ -45,4 +43,23 @@ void PrintArray(int[,] inArray)
         }
         Console.WriteLine();
     }
+}
+
+int PrintArrayEL(int[,] inArray) 
+{
+    var minI = 0;
+    var min = 0;
+    for (int i = 0; i < inArray.GetLength(0); i++ ) 
+    {
+        var sumRow = 0;
+        for (int j = 0; j < inArray.GetLength(1); j++) 
+        {
+            sumRow += inArray[i, j];
+        }
+        if (sumRow < min) {
+            min = sumRow;
+            minI = i;
+        }
+    }
+    return minI;
 }
