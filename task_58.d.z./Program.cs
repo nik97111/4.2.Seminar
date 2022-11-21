@@ -9,38 +9,39 @@
 // 15 18
 
 Console.Write("Введите количество строк массива: ");
-int rows = int.Parse(Console.ReadLine());
+int rows1 = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов массива: ");
-int columns = int.Parse(Console.ReadLine());
+int columns1 = int.Parse(Console.ReadLine());
 
 Console.Write("Введите количество строк массива: ");
-int rows = int.Parse(Console.ReadLine());
+int rows2 = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов массива: ");
-int columns = int.Parse(Console.ReadLine());
+int columns2 = int.Parse(Console.ReadLine());
 
 
 
-int[,] array = GetArray(rows, columns, 0, 10);
-PrintArrayMatrix1(array);
-PrintArrayMatrix2(array);
-// PrintArrayEl(array);
-// Console.WriteLine();
-// PrintArray(array);
+int[,] arrayMatrix1 = GetArrayMatrix1(rows1, columns1, 0, 10);
+int[,] arrayMatrix2 = GetArrayMatrix2(rows2, columns2, 0, 10);
+PrintArrayMatrix1(arrayMatrix1);
+Console.WriteLine();
+PrintArrayMatrix2(arrayMatrix2);
+Console.WriteLine();
+int[,] arrayMultiplicationOfTwoMatrices = GetArraysMultiplication(arrayMatrix1, arrayMatrix2, rows1, rows2, columns1, columns2);
+PrintArrayMultiplication(arrayMultiplicationOfTwoMatrices);
+
 
 int[,] GetArrayMatrix1(int m, int n, int minValue, int maxValue) 
 {
-    
-    int[,] arr = new int[m, n];
+    int[,] arr1 = new int[m, n];
     for (int i = 0; i < m; i++ ) 
     {
         for (int j = 0; j < n; j++) 
         {
-            arr[i, j] = new Random().Next(minValue, maxValue);
+            arr1[i, j] = new Random().Next(minValue, maxValue);
         }
     }
-    return arr;
+    return arr1;
 }
-
 
 void PrintArrayMatrix1(int[,] inArray) 
 {
@@ -52,21 +53,20 @@ void PrintArrayMatrix1(int[,] inArray)
         }
         Console.WriteLine();
     }
-}
+}        
 
 
 int[,] GetArrayMatrix2(int m, int n, int minValue, int maxValue) 
 {
-    
-    int[,] arr = new int[m, n];
+    int[,] arr2 = new int[m, n];
     for (int i = 0; i < m; i++ ) 
     {
         for (int j = 0; j < n; j++) 
         {
-            arr[i, j] = new Random().Next(minValue, maxValue);
+            arr2[i, j] = new Random().Next(minValue, maxValue);
         }
     }
-    return arr;
+    return arr2;
 }
 
 void PrintArrayMatrix2(int[,] inArray) 
@@ -81,59 +81,35 @@ void PrintArrayMatrix2(int[,] inArray)
     }
 }
 
-// void PrintArrayEL(int[,] inArray) 
-// {
-//     var sumRow = 0;
-//     for (int i = 0; i < inArray.GetLength(0); i++ ) 
-//     {
-//         for (int j = 0; j < inArray.GetLength(1); j++) 
-//         {
-//             sumRow += inArray[0, n-1];
-//             Console.Write(sumRow);
-//         }
-//         Console.WriteLine();
-//     }
-// }
+
+int[,] GetArraysMultiplication(int[,] arrayMatrix1, int[,] arrayMatrix2, int rows1, int rows2, int columns1, int columns2) 
+{
+    int[,] arrayMultiplication = new int[rows1, columns2];
+
+    arrayMultiplication[0, 1] = (arrayMatrix1[0, 0] * arrayMatrix2[0, 1]) +
+    (arrayMatrix1[0, 1] * arrayMatrix2[1, 1]);
+
+    arrayMultiplication[0, 0] = (arrayMatrix1[0, 0] * arrayMatrix2[0, 0]) +
+    (arrayMatrix1[0, 1] * arrayMatrix2[1, 0]);
+
+    arrayMultiplication[1, 0] = (arrayMatrix1[1, 0] * arrayMatrix2[0, 0]) +
+    (arrayMatrix1[1, 1] * arrayMatrix2[1, 0]);
+
+    arrayMultiplication[1, 1] = (arrayMatrix1[1, 0] * arrayMatrix2[0, 1]) +
+    (arrayMatrix1[1, 1] * arrayMatrix2[1, 1]);
 
 
-//var arrayMatrix1 = (1...2).map { _ in
-//    var arr = Array(repeating: 0, count: 2)
-//    for i in 0..<arr.count {
-//        arr[i] = Int.random(in: 3...10)
-//    }
-//    return arr
-//}
+    return arrayMultiplication;
+}
 
-//print(arrayMatrix1)
-////for row1 in arrayMatrix2 {
-////    print(row1)
-//
-//var arrayMatrix2 = (1...2).map { _ in
-//    var arr = Array(repeating: 0, count: 2)
-//    for i in 0..<arr.count {
-//        arr[i] = Int.random(in: 3...9)
-//    }
-//    return arr
-//}
-//print(arrayMatrix2)
-////for row2 in arrayMatrix2 {
-////    print(row2)
-//
-//var arrayMultiplication = (0...1).map{ _ in [Int](repeating: 0, count: 2)}
-//print(arrayMultiplication)
-//
-//arrayMultiplication[0][1] = (arrayMatrix1[0][0] * arrayMatrix2[0][1]) +
-//(arrayMatrix1[0][1] * arrayMatrix2[1][1])
-//
-//arrayMultiplication[0][0] = (arrayMatrix1[0][0] * arrayMatrix2[0][0]) +
-//(arrayMatrix1[0][1] * arrayMatrix2[1][0])
-//
-//arrayMultiplication[1][0] = (arrayMatrix1[1][0] * arrayMatrix2[0][0]) +
-//(arrayMatrix1[1][1] * arrayMatrix2[1][0])
-//
-//arrayMultiplication[1][1] = (arrayMatrix1[1][0] * arrayMatrix2[0][1]) +
-//(arrayMatrix1[1][1] * arrayMatrix2[1][1])
-//
-//for row3 in arrayMultiplication {
-//    print(row3)
-//}
+void PrintArrayMultiplication(int[,] inArray) 
+{
+    for (int i = 0; i < inArray.GetLength(0); i++ ) 
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++) 
+        {
+            Console.Write($"{inArray[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
