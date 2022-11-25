@@ -19,8 +19,8 @@ int columns = int.Parse(Console.ReadLine());
 int[,] array = GetArray(rows, columns, 0, 10);
 PrintArray(array);
 Console.WriteLine();
-int[,] sortArray = GetSortArray(array, rows, columns);
-SelectionSort(sortArray);
+GetSortArray(array, rows, columns);
+PrintArray(array);
 
 
 
@@ -49,25 +49,23 @@ void PrintArray(int[,] inArray)
     }
 }
 
-int[,] GetSortArray(int[,] inArray, int m, int n) 
+void GetSortArray(int[,] inArray, int m, int n) 
 {
-    int[,] arr = new int[m, n];
-    for (int i = 0; i < inArray.GetLength(0); i++)
+    for (int q = 0; q < m; q++) 
     {
-        for (int j = 0; j < inArray.GetLength(1); j++) 
+        for (int i = 0; i < n; i++)
         {
-            var max = inArray[i, j];
-            if (inArray[j, i] > max)
+            for (int j = i + 1; j < n; j++) 
             {
-            max = inArray[j, i];
+                if (inArray[q, j] > inArray[q, i]) 
+                {
+                    var temp = inArray[q, j];
+                    inArray[q, j] = inArray[q, i];
+                    inArray[q, i] = temp;
+                }
             }
-
-        var temp = inArray[i, j];
-        inArray[i, j] = max;
-        max = temp;
         }
     }
-    return arr;
 }
 
 void SelectionSort(int[] arr) 
